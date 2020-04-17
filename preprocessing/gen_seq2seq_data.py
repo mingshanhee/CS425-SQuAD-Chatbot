@@ -97,10 +97,6 @@ if __name__ == '__main__':
             print('processing %d / %d (used_time = %.2fs)...' %
                   (i, len(dataset['data']), time.time() - start_time))
 
-        if i % int(len(dataset['data']) / 4) == 0 and i != 0: # Perform Sanity Check Quarterly
-            print('Sanity Checks - Full:', sanity_checks['full'])
-            print('Sanity Checks - Answers:', sanity_checks['answer'])
-
         for paragraph in datum['paragraphs']:
             context_str = tokenize_text(paragraph['context'])
             
